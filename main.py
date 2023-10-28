@@ -24,21 +24,13 @@ def read_employees_from_file(users):
 
 
 def GetNameOfDay(date):
-    switcher = {
-        0: "Monday",
-        1: "Tuesday",
-        2: "Wednesday",
-        3: "Thursday",
-        4: "Friday",
-        5: "Saturday",
-        6: "Sunday"
-    }
-    return switcher.get(date.weekday(), "Invalid day")
+    return date.strftime('%A')
 
 
-print(read_employees_from_file([
-    {"name": "Bill Gates", "birthday": datetime(1955, 10, 28)},
-    {"name": "Kalle", "birthday": datetime(1992, 10, 28)},
-    {"name": "Steve Jobs", "birthday": datetime(1955, 10, 28)},
-    {"name": "Anelia", "birthday": datetime(1996, 10, 29)}
-]))
+if __name__ == "__main__":
+    print(read_employees_from_file([
+        {"name": "Bill Gates", "birthday": datetime(1955, 10, 28)},
+        {"name": "Kalle", "birthday": datetime(1992, 10, 28)},
+        {"name": "Steve Jobs", "birthday": datetime(1955, 10, 28)},
+        {"name": "Anelia", "birthday": datetime(1996, 10, 29)}
+    ]))
