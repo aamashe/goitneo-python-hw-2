@@ -27,7 +27,7 @@ def main():
             else:
                 print("Invalid command.")
         except Exception as e:
-            # Handle any type of exception
+
             print(f"{e}")
 
 
